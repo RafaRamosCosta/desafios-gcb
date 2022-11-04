@@ -14,7 +14,7 @@ class ArrayFilter {
                 }
                 return this.array;
             }
-            throw new Error('Tamanho do array ou do filtro inválido');
+            throw new RangeError('Tamanho do array ou do filtro inválido');
         }
         catch (error) {
             console.log(error);

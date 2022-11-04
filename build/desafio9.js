@@ -16,7 +16,10 @@ class SplittedArray {
                 }
                 return splittedArray;
             }
-            throw new Error('Condição de divisão inválida ou array vazio');
+            else if (splitCondition <= 0) {
+                throw new Error('Condição de divisão inválida');
+            }
+            throw new RangeError('Tamanho do array inválido');
         }
         catch (err) {
             console.log(err);
@@ -24,7 +27,16 @@ class SplittedArray {
     }
 }
 const arr = new SplittedArray([
-    1, 'b', 3, 'd', 5, 'e', 7, 'f', 9, 10,
+    1,
+    'b',
+    3,
+    'd',
+    5,
+    'e',
+    7,
+    'f',
+    9,
+    10,
 ]).splitArray(3);
 exports.arr = arr;
 console.log(arr);

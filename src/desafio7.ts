@@ -1,5 +1,7 @@
 class EqualArrays {
-  constructor(array1, array2) {
+  private array1: (number | string)[];
+  private array2: (number | string)[];
+  constructor(array1: (number | string)[], array2: (number | string)[]) {
     this.array1 = array1;
     this.array2 = array2;
   }
@@ -23,5 +25,10 @@ class EqualArrays {
   }
 }
 
-const array = new EqualArrays([1, 3, 2], [1, 3, 2]).compareArrays();
-console.log(array);
+const arr: boolean | undefined = new EqualArrays(
+  ["a", 2, "c"],
+  ["a", 2, "c"]
+).compareArrays();
+console.log(arr);
+
+export { arr };

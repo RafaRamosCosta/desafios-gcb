@@ -1,11 +1,12 @@
 class Parser {
-  constructor(array) {
+  private array: (string | number)[][];
+  constructor(array: (string | number)[][]) {
     this.array = array;
   }
   parseToObject() {
     try {
       if (this.array.length > 0) {
-        let obj = {};
+        const obj: any = {};
         for (let arr of this.array) {
           obj[arr[0]] = arr[1];
         }
@@ -18,9 +19,11 @@ class Parser {
   }
 }
 
-const obj = new Parser([
+const obj: object = new Parser([
   ['a', 1],
   ['b', 2],
   ['c', 3],
 ]).parseToObject();
 console.log(obj);
+
+export { obj };

@@ -1,5 +1,7 @@
 class ArrayFilter {
-  constructor(array, filters) {
+  private array: (number | string)[];
+  private filters: (number | string)[];
+  constructor(array: (number | string)[], filters: (number | string)[]) {
     this.array = array;
     this.filters = filters;
   }
@@ -18,8 +20,10 @@ class ArrayFilter {
   }
 }
 
-const array = new ArrayFilter(
-  [1, 3, 3, 3, 3, 3, 4, 4, 5, 6, 7, 8],
-  [3, 4]
+const arr: (number | string)[] | undefined = new ArrayFilter(
+  [1, 3, 3, 'a', 'a', 3, 3, 3, 4, 4, 5, 6, 7, 8],
+  [3, 4, 'a']
 ).filterArray();
-console.log(array);
+console.log(arr);
+
+export { arr };

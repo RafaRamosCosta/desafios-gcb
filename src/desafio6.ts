@@ -1,9 +1,10 @@
 class ArrayWithoutDuplicates {
-  constructor(array) {
+  private array: (number | string)[];
+  constructor(array: (number | string)[]) {
     this.array = array;
   }
   cleanDuplicates() {
-    let cleanArray = [];
+    let cleanArray: (number | string)[] = [];
     try {
       if (this.array.length > 0) {
         for (let val of this.array) {
@@ -20,7 +21,21 @@ class ArrayWithoutDuplicates {
   }
 }
 
-const array = new ArrayWithoutDuplicates([
-  5, 5, 4, 4, 3, 2, 1, 2, 3,
+const arr: (number | string)[] | undefined = new ArrayWithoutDuplicates([
+  5,
+  5,
+  4,
+  4,
+  3,
+  'b',
+  'b',
+  2,
+  1,
+  'a',
+  2,
+  'c',
+  3,
 ]).cleanDuplicates();
-console.log(array);
+console.log(arr);
+
+export { arr };

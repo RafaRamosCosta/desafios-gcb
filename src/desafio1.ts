@@ -1,8 +1,9 @@
 class CreateArray {
+  private array: (number | string)[];
   constructor() {
     this.array = [];
   }
-  populateArray(size, value) {
+  populateArray(size: number, value: number | string) {
     try {
       if (size > 0) {
         for (let i = 0; i <= size; i++) {
@@ -17,5 +18,10 @@ class CreateArray {
   }
 }
 
-const array = new CreateArray().populateArray(0, 'a');
-console.log(array);
+const arr: (number | string)[] | undefined = new CreateArray().populateArray(
+  5,
+  'a'
+);
+console.log(arr);
+
+export { arr };

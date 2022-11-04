@@ -1,5 +1,6 @@
 class CleanedArray {
-  constructor(array) {
+  private array: any[]; // passei any[] pois o array para aceitar todos os falsy values, numbers e strings
+  constructor(array: any[]) {
     this.array = array;
   }
   cleanArray() {
@@ -20,14 +21,18 @@ class CleanedArray {
   }
 }
 
-const array = new CleanedArray([
+const arr: (number|string)[] | undefined = new CleanedArray([
   1,
   null,
+  'b',
   2,
+  'c',
   0,
+  'd',
   3,
   undefined,
   false,
   '',
 ]).cleanArray();
-console.log(array);
+console.log(arr);
+export { arr };

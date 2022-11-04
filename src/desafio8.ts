@@ -1,5 +1,6 @@
 class SimpleArray {
-  constructor(arrayOfArrays) {
+  private arrayOfArrays: any[];
+  constructor(arrayOfArrays: any[]) {
     this.arrayOfArrays = arrayOfArrays;
   }
   simplify() {
@@ -24,5 +25,14 @@ class SimpleArray {
   }
 }
 
-const array = new SimpleArray([[1, 2], 3, 4, [5], 6, 7, [8, 9, 10]]).simplify();
-console.log(array);
+const arr: any[] | undefined = new SimpleArray([
+  [1, 2],
+  'a',
+  'b',
+  [5],
+  6,
+  'd',
+  [8, 9, 10],
+]).simplify();
+console.log(arr);
+export { arr };

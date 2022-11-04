@@ -1,5 +1,6 @@
 class InvertedArray {
-  constructor(array) {
+  private array: (number | string)[];
+  constructor(array: (number | string)[]) {
     this.array = array;
   }
   invertArray() {
@@ -19,16 +20,18 @@ class InvertedArray {
   }
 }
 
-const array = new InvertedArray([
+const arr: (string | number)[] | undefined = new InvertedArray([
   'a',
+  1,
   'b',
+  2,
   'c',
+  3,
   'd',
+  4,
   'e',
+  5,
   'f',
-  'g',
-  'h',
-  'i',
-  'j',
 ]).invertArray();
-console.log(array);
+console.log(arr);
+export { arr };

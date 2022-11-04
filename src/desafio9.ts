@@ -1,14 +1,15 @@
 class SplittedArray {
-  constructor(array) {
+  private array: (number | string)[];
+  constructor(array: (number | string)[]) {
     this.array = array;
   }
 
-  splitArray(splitCondition) {
-    let splittedArray = [];
+  splitArray(splitCondition: number) {
+    let splittedArray: (number | string)[][] = [];
     try {
       if (
         splitCondition > 0 &&
-        splitCondition <= this.array.length &&
+        splitCondition < this.array.length &&
         this.array.length > 0
       ) {
         for (let i = 0; i < this.array.length; i += splitCondition) {
@@ -20,9 +21,11 @@ class SplittedArray {
     } catch (err) {
       console.log(err);
     }
-    return 'Passe uma condição válida e um tamanho';
   }
 }
 
-const array = new SplittedArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]).splitArray(3);
-console.log(array);
+const arr: (number | string)[][] | undefined = new SplittedArray([
+  1, 'b', 3, 'd', 5, 'e', 7, 'f', 9, 10,
+]).splitArray(3);
+console.log(arr);
+export { arr };

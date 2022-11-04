@@ -16,8 +16,10 @@ class SplittedArray {
           splittedArray.push(this.array.slice(i, i + splitCondition));
         }
         return splittedArray;
+      } else if (splitCondition <= 0) {
+        throw new Error('Condição de divisão inválida');
       }
-      throw new Error('Condição de divisão inválida ou array vazio');
+      throw new RangeError('Tamanho do array inválido');
     } catch (err) {
       console.log(err);
     }
@@ -25,7 +27,16 @@ class SplittedArray {
 }
 
 const arr: (number | string)[][] | undefined = new SplittedArray([
-  1, 'b', 3, 'd', 5, 'e', 7, 'f', 9, 10,
+  1,
+  'b',
+  3,
+  'd',
+  5,
+  'e',
+  7,
+  'f',
+  9,
+  10,
 ]).splitArray(3);
 console.log(arr);
 export { arr };

@@ -14,14 +14,14 @@ class CleanedArray {
         }
         return cleanedArray;
       }
-      throw new Error('Tamanho do array inválido');
+      throw new RangeError('Tamanho do array inválido');
     } catch (error) {
       console.log(error);
     }
   }
 }
 
-const arr: (number|string)[] | undefined = new CleanedArray([
+const arr: (number | string)[] | undefined = new CleanedArray([
   1,
   null,
   'b',

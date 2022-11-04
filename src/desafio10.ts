@@ -20,7 +20,7 @@ class CommonValue {
         }
         return 'Nenhum valor em comum';
       }
-      throw new Error('Tamanho(s) do(s) array(s) inválido(s)');
+      throw new RangeError('Tamanho(s) do(s) array(s) inválido(s)');
     } catch (error) {
       console.log(error);
     }

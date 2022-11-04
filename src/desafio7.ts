@@ -18,7 +18,7 @@ class EqualArrays {
         }
         return true;
       }
-      throw new Error('Tamanho do array inválido');
+      throw new RangeError('Tamanho do array inválido');
     } catch (error) {
       console.log(error);
     }

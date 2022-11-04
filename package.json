@@ -1,0 +1,23 @@
+{
+  "name": "desafios-gcb",
+  "version": "1.0.0",
+  "description": "desafios propostos no processo seletivo da gcb-academy",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RafaRamosCosta/desafios-gcb.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RafaRamosCosta/desafios-gcb/issues"
+  },
+  "homepage": "https://github.com/RafaRamosCosta/desafios-gcb#readme",
+  "devDependencies": {
+    "typescript": "^4.8.4"
+  }
+}

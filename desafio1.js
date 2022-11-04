@@ -3,12 +3,19 @@ class CreateArray {
     this.array = [];
   }
   populateArray(size, value) {
-    for (let i = 0; i <= size; i++) {
-      this.array[i] = value;
+    try {
+      if (size > 0) {
+        for (let i = 0; i <= size; i++) {
+          this.array[i] = value;
+        }
+        return this.array;
+      }
+      throw new Error('Tamanho do array inválido');
+    } catch (error) {
+      console.log(error);
     }
-    return this.array;
   }
 }
 
-const array = new CreateArray(10, 'a').populateArray(10, 'a');
+const array = new CreateArray().populateArray(0, 'a');
 console.log(array);

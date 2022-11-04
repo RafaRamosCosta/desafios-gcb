@@ -3,24 +3,31 @@ class CleanedArray {
     this.array = array;
   }
   cleanArray() {
-    let arrayLimpo = [];
-    for (let i of this.array) {
-      if (i) {
-        arrayLimpo[arrayLimpo.length] = i;
+    try {
+      if (this.array.length > 0) {
+        let cleanedArray = [];
+        for (let i of this.array) {
+          if (i) {
+            cleanedArray[cleanedArray.length] = i;
+          }
+        }
+        return cleanedArray;
       }
+      throw new Error('Tamanho do array inválido');
+    } catch (error) {
+      console.log(error);
     }
-    return arrayLimpo;
   }
 }
 
 const array = new CleanedArray([
-  0,
   1,
-  false,
-  2,
-  undefined,
-  '',
-  3,
   null,
+  2,
+  0,
+  3,
+  undefined,
+  false,
+  '',
 ]).cleanArray();
 console.log(array);

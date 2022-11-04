@@ -3,16 +3,32 @@ class InvertedArray {
     this.array = array;
   }
   invertArray() {
-    let invArray = [];
-    for (let i = this.array.length - 1; i >= 0; i--) {
-      let item = this.array[i];
-      invArray[arrayInverso.length] = item;
+    try {
+      if (this.array.length > 0) {
+        let invArray = [];
+        for (let i = this.array.length - 1; i >= 0; i--) {
+          let item = this.array[i];
+          invArray[invArray.length] = item;
+        }
+        return invArray;
+      }
+      throw new Error('Tamanho do array inválido');
+    } catch (error) {
+      console.log(error);
     }
-    return invArray;
   }
 }
 
 const array = new InvertedArray([
-  'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'
+  'a',
+  'b',
+  'c',
+  'd',
+  'e',
+  'f',
+  'g',
+  'h',
+  'i',
+  'j',
 ]).invertArray();
 console.log(array);

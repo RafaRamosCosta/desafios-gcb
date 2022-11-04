@@ -3,11 +3,18 @@ class Parser {
     this.array = array;
   }
   parseToObject() {
-    let obj = {};
-    for (let arr of this.array) {
-        obj[arr[0]] = arr[1];
+    try {
+      if (this.array.length > 0) {
+        let obj = {};
+        for (let arr of this.array) {
+          obj[arr[0]] = arr[1];
+        }
+        return obj;
+      }
+      throw new Error('Tamanho do array inválido');
+    } catch (error) {
+      console.log(error);
     }
-    return obj;
   }
 }
 

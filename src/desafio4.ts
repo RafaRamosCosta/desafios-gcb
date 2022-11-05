@@ -26,4 +26,4 @@ const obj: object = new Parser([
 ]).parseToObject();
 console.log(obj);
 
-export { obj };
+export { Parser, obj };

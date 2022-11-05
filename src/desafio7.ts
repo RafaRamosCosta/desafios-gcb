@@ -31,4 +31,4 @@ const arr: boolean | undefined = new EqualArrays(
 ).compareArrays();
 console.log(arr);
 
-export { arr };
+export { EqualArrays, arr };

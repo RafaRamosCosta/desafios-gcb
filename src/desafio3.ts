@@ -35,4 +35,4 @@ const arr: (number | string)[] | undefined = new CleanedArray([
   '',
 ]).cleanArray();
 console.log(arr);
-export { arr };
+export { CleanedArray, arr };

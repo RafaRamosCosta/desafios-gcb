@@ -39,4 +39,4 @@ const arr: (number | string)[][] | undefined = new SplittedArray([
   10,
 ]).splitArray(3);
 console.log(arr);
-export { arr };
+export { SplittedArray, arr };

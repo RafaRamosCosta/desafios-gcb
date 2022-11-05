@@ -35,4 +35,4 @@ const arr: any[] | undefined = new SimpleArray([
   [8, 9, 10],
 ]).simplify();
 console.log(arr);
-export { arr };
+export { SimpleArray, arr };

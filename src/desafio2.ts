@@ -34,4 +34,5 @@ const arr: (string | number)[] | undefined = new InvertedArray([
   'f',
 ]).invertArray();
 console.log(arr);
-export { arr };
+
+export { InvertedArray, arr };

@@ -6,7 +6,7 @@ class CreateArray {
   populateArray(size: number, value: number | string) {
     try {
       if (size > 0) {
-        for (let i = 0; i <= size; i++) {
+        for (let i = 0; i < size; i++) {
           this.array[i] = value;
         }
         return this.array;
@@ -24,4 +24,4 @@ const arr: (number | string)[] | undefined = new CreateArray().populateArray(
 );
 console.log(arr);
 
-export { arr };
+export { CreateArray, arr };

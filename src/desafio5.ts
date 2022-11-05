@@ -26,4 +26,4 @@ const arr: (number | string)[] | undefined = new ArrayFilter(
 ).filterArray();
 console.log(arr);
 
-export { arr };
+export { ArrayFilter, arr };

@@ -38,4 +38,4 @@ const arr: (number | string)[] | undefined = new ArrayWithoutDuplicates([
 ]).cleanDuplicates();
 console.log(arr);
 
-export { arr };
+export { ArrayWithoutDuplicates, arr };

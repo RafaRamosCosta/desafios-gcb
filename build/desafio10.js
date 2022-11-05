@@ -1,4 +1,6 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CommonValue = void 0;
 class CommonValue {
     constructor(array1, array2) {
         this.array1 = array1;
@@ -25,5 +27,6 @@ class CommonValue {
         }
     }
 }
+exports.CommonValue = CommonValue;
 const commonValue = new CommonValue([1, 7, 8, 4, 'a'], [6, 7, 8, 9, 'a']).getCommonValue();
 console.log(commonValue);

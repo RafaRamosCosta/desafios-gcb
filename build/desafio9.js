@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.arr = void 0;
+exports.arr = exports.SplittedArray = void 0;
 class SplittedArray {
     constructor(array) {
         this.array = array;
@@ -26,6 +26,7 @@ class SplittedArray {
         }
     }
 }
+exports.SplittedArray = SplittedArray;
 const arr = new SplittedArray([
     1,
     'b',

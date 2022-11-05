@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.arr = void 0;
+exports.arr = exports.InvertedArray = void 0;
 class InvertedArray {
     constructor(array) {
         this.array = array;
@@ -22,6 +22,7 @@ class InvertedArray {
         }
     }
 }
+exports.InvertedArray = InvertedArray;
 const arr = new InvertedArray([
     'a',
     1,

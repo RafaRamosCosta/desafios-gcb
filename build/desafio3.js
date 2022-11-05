@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.arr = void 0;
+exports.arr = exports.CleanedArray = void 0;
 class CleanedArray {
     constructor(array) {
         this.array = array;
@@ -23,6 +23,7 @@ class CleanedArray {
         }
     }
 }
+exports.CleanedArray = CleanedArray;
 const arr = new CleanedArray([
     1,
     null,

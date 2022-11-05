@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.arr = void 0;
+exports.arr = exports.ArrayWithoutDuplicates = void 0;
 class ArrayWithoutDuplicates {
     constructor(array) {
         this.array = array;
@@ -23,6 +23,7 @@ class ArrayWithoutDuplicates {
         }
     }
 }
+exports.ArrayWithoutDuplicates = ArrayWithoutDuplicates;
 const arr = new ArrayWithoutDuplicates([
     5,
     5,

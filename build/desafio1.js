@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.arr = void 0;
+exports.arr = exports.CreateArray = void 0;
 class CreateArray {
     constructor() {
         this.array = [];
@@ -8,7 +8,7 @@ class CreateArray {
     populateArray(size, value) {
         try {
             if (size > 0) {
-                for (let i = 0; i <= size; i++) {
+                for (let i = 0; i < size; i++) {
                     this.array[i] = value;
                 }
                 return this.array;
@@ -20,6 +20,7 @@ class CreateArray {
         }
     }
 }
+exports.CreateArray = CreateArray;
 const arr = new CreateArray().populateArray(5, 'a');
 exports.arr = arr;
 console.log(arr);

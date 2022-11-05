@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.obj = void 0;
+exports.obj = exports.Parser = void 0;
 class Parser {
     constructor(array) {
         this.array = array;
@@ -21,6 +21,7 @@ class Parser {
         }
     }
 }
+exports.Parser = Parser;
 const obj = new Parser([
     ['a', 1],
     ['b', 2],

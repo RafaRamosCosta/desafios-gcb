@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.arr = void 0;
+exports.arr = exports.SimpleArray = void 0;
 class SimpleArray {
     constructor(arrayOfArrays) {
         this.arrayOfArrays = arrayOfArrays;
@@ -27,6 +27,7 @@ class SimpleArray {
         }
     }
 }
+exports.SimpleArray = SimpleArray;
 const arr = new SimpleArray([
     [1, 2],
     'a',

@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.arr = void 0;
+exports.arr = exports.EqualArrays = void 0;
 class EqualArrays {
     constructor(array1, array2) {
         this.array1 = array1;
@@ -26,6 +26,7 @@ class EqualArrays {
         }
     }
 }
+exports.EqualArrays = EqualArrays;
 const arr = new EqualArrays(["a", 2, "c"], ["a", 2, "c"]).compareArrays();
 exports.arr = arr;
 console.log(arr);

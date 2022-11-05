@@ -33,3 +33,5 @@ const commonValue: (number | string)[] | string | undefined = new CommonValue(
 ).getCommonValue();
 
 console.log(commonValue);
+
+export { CommonValue };
